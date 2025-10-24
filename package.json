@@ -2,9 +2,6 @@
   "name": "acampamento-desbravadores",
   "version": "1.0.0",
   "type": "module",
-  "description": "Sistema de gerenciamento para clubes de desbravadores",
-  "license": "MIT",
-  "author": "Seu Nome",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,7 +10,9 @@
   "dependencies": {
     "vue": "^3.3.0",
     "vuetify": "^3.3.0",
-    "chart.js": "^4.4.0"
+    "chart.js": "^4.4.0",
+    "@mdi/font": "^7.4.47",
+    "vue-router": "^4.2.0"
   },
   "devDependencies": {
     "vite": "^4.4.0",
