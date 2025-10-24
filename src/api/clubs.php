@@ -1,0 +1,52 @@
+<?php
+header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Origin: *"); 
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Methods: GET, OPTIONS");
+
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
+
+ini_set('display_errors', 0);
+error_reporting(0);
+
+try {
+    $servername = "localhost";
+    $username = "root";
+    $password_db = "";
+    $dbname = "sistema_desbravadores";
+
+    $conn = new mysqli($servername, $username, $password_db, $dbname);
+
+    if ($conn->connect_error) {
+        throw new Exception("Erro de conexão: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT id, name FROM clubs ORDER BY name";
+    $result = $conn->query($sql);
+    
+    $clubs = [];
+    
+    while ($row = $result->fetch_assoc()) {
+        $clubs[] = [
+            'id' => $row['id'],
+            'name' => $row['name']
+        ];
+    }
+
+    echo json_encode([
+        "success" => true,
+        "data" => $clubs
+    ]);
+
+    $conn->close();
+
+} catch (Exception $e) {
+    echo json_encode([
+        "success" => false,
+        "message" => "Erro: " . $e->getMessage()
+    ]);
+}
+?>

@@ -1,0 +1,48 @@
+{
+  "name": "acampamento-desbravadores",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Sistema de gerenciamento e pontuação para clubes de desbravadores",
+  "license": "MIT",
+  "author": "Seu Nome",
+  "keywords": [
+    "desbravadores",
+    "vue",
+    "php",
+    "sistema",
+    "pontuação"
+  ],
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --fix",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "axios": "^1.12.2",
+    "chart.js": "^4.5.1",
+    "vite-plugin-vuetify": "^2.1.2",
+    "vue": "^3.5.22",
+    "vue-chartjs": "^5.3.2",
+    "vue-router": "^4.5.1",
+    "vuetify": "^3.10.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-vue": "~10.4.0",
+    "globals": "^16.3.0",
+    "prettier": "3.6.2",
+    "vite": "^7.1.7",
+    "vite-plugin-vue-devtools": "^8.0.2"
+  }
+}
