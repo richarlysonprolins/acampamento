@@ -50,7 +50,7 @@ async function login() {
 
   try {
     // Use URL relativa para evitar CORS
-    const response = await fetch('/${API_BASE_URL}/valida_login.php', {
+    const response = await fetch(API_BASE_URL + '/valida_login.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
