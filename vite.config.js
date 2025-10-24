@@ -1,5 +1,4 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
@@ -16,13 +15,11 @@ export default defineConfig({
   },
   server: {
     host: true, // ✅ Permite conexões externas
-    port: 5173, // porta que você quiser
-    proxy: {
-      '/api': {
-        target: 'http://localhost/Acampamento_Desbravadores/src/', // backend PHP (Apache)
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, 'api'),
-      },
-    },
+    port: 5173,
+    // REMOVA o proxy - não é mais necessário para produção
+  },
+  build: {
+    outDir: 'dist', // ✅ Pasta de build para Netlify
+    assetsDir: 'assets', // ✅ Organiza assets
   },
 })
