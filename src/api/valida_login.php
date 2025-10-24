@@ -25,10 +25,10 @@ try {
         throw new Exception("JSON inválido: " . json_last_error_msg());
     }
 
-    $servername = "localhost";
-    $username = "root";
-    $password_db = "";
-    $dbname = "sistema_desbravadores";
+    $servername = "sql302.infinityfree.com";
+    $username = "if0_40247958";
+    $password_db = "upEz38Dpv8";
+    $dbname = "if0_40247958_sistema_desbravadores";
 
     $conn = new mysqli($servername, $username, $password_db, $dbname);
 

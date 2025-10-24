@@ -88,7 +88,10 @@ import {
 // Registrar TODOS os elementos necessários do Chart.js
 ChartJS.register(Title, Tooltip, Legend, CategoryScale, LinearScale, BarElement, BarController)
 // Logo após os imports, adicione:
-const API_BASE_URL = import.meta.env.VITE_API_URL || '${API_BASE_URL}'
+
+
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api'
+const APP_NAME = import.meta.env.VITE_APP_NAME || 'Sistema Desbravadores'
 
 // E substitua TODAS as chamadas fetch, exemplo:
 // ANTES: fetch('${API_BASE_URL}/users.php')
