@@ -35,6 +35,10 @@ const user = ref('')
 const password = ref('')
 const router = useRouter()
 
+
+// ADICIONE NO INÍCIO:
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api'
+
 async function login() {
   if (!user.value || !password.value) {
     errorMessage.value = 'Preencha todos os campos!'
