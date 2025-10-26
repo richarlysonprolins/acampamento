@@ -9,7 +9,7 @@
           width="75%"
           height="75%"
         />
-        <h2 class="text-h6">Baem-vindo(a)</h2>
+        <h2 class="text-h6">Bem-vindo(a)</h2>
       </div>
 
       <v-form @submit.prevent="login">
