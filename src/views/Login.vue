@@ -35,14 +35,8 @@ const user = ref('')
 const password = ref('')
 const router = useRouter()
 
-<<<<<<< HEAD
-const API_BASE_URL = import.meta.env.VITE_API_URL || '/api'
+const API_BASE_URL = import.meta.env.VITE_API_URL || '//.netlify/functions/proxy'
 const APP_NAME = import.meta.env.VITE_APP_NAME || 'Sistema Desbravadores'
-=======
-
-// ADICIONE NO INÍCIO:
-const API_BASE_URL = import.meta.env.VITE_API_URL || '/api'
->>>>>>> 360d016b9d460108a2c44b28fd7aee5fdf101332
 
 async function login() {
   if (!user.value || !password.value) {
