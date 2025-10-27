@@ -35,6 +35,9 @@ const user = ref('')
 const password = ref('')
 const router = useRouter()
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api'
+const APP_NAME = import.meta.env.VITE_APP_NAME || 'Sistema Desbravadores'
+
 async function login() {
   if (!user.value || !password.value) {
     errorMessage.value = 'Preencha todos os campos!'
