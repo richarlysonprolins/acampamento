@@ -35,8 +35,14 @@ const user = ref('')
 const password = ref('')
 const router = useRouter()
 
+<<<<<<< HEAD
 const API_BASE_URL = import.meta.env.VITE_API_URL || '/api'
 const APP_NAME = import.meta.env.VITE_APP_NAME || 'Sistema Desbravadores'
+=======
+
+// ADICIONE NO INÍCIO:
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api'
+>>>>>>> 360d016b9d460108a2c44b28fd7aee5fdf101332
 
 async function login() {
   if (!user.value || !password.value) {
@@ -49,7 +55,7 @@ async function login() {
 
   try {
     // Use URL relativa para evitar CORS
-    const response = await fetch('/${API_BASE_URL}/valida_login.php', {
+    const response = await fetch(API_BASE_URL + '/valida_login.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
